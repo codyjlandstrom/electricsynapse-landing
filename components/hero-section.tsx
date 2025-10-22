@@ -18,7 +18,7 @@ export function HeroSection() {
       </header>
 
       <section className="relative w-full px-6 py-16 md:px-12 lg:px-16 flex-1 flex items-center">
-        <div className="absolute inset-0 overflow-hidden opacity-20">
+        <div className="absolute inset-0 overflow-hidden opacity-15">
           <img
             src="/abstract-environmental-sustainability-nature-techn.jpg"
             alt="Abstract environmental sustainability and nature technology"
@@ -30,7 +30,7 @@ export function HeroSection() {
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]">
             <span className="text-primary">The signal</span> that transforms data into stories.
           </h2>
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl">
+          <p className="mt-6 text-lg md:text-xl text-foreground/80 max-w-2xl">
             We're <span className="font-medium text-foreground">Electric Synapse Guild (ESG)</span> — a creative studio
             + AI platform that turns sustainability and ESG data into credible content for people and machines.
           </p>
@@ -51,22 +51,22 @@ export function HeroSection() {
           </div>
 
           <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-xl border border-border/60 bg-card/50 p-5 backdrop-blur-sm transition-all duration-300 hover:border-accent hover:bg-accent/5 hover:shadow-[0_0_20px_rgba(78,205,196,0.15)]">
-              <h3 className="font-semibold text-black">StoryFlow ESG</h3>
-              <p className="mt-2 text-sm text-black">
+            <div className="rounded-xl border border-border/60 bg-card/80 p-5 backdrop-blur-sm transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:shadow-[0_0_20px_rgba(78,205,196,0.15)]">
+              <h3 className="font-semibold text-foreground">StoryFlow ESG</h3>
+              <p className="mt-2 text-sm text-foreground/75">
                 Narrative intelligence that converts ESG reports and raw data into budget-sensitive strategies and
                 creative content, campaigns, and machine-readable releases.
               </p>
             </div>
-            <div className="rounded-xl border border-border/60 bg-card/50 p-5 backdrop-blur-sm transition-all duration-300 hover:border-[oklch(78%_0.14_75)] hover:bg-[oklch(78%_0.14_75)]/5 hover:shadow-[0_0_20px_rgba(255,191,105,0.15)]">
-              <h3 className="font-semibold text-black">Synapse Guard</h3>
-              <p className="mt-2 text-sm text-black">
+            <div className="rounded-xl border border-border/60 bg-card/80 p-5 backdrop-blur-sm transition-all duration-300 hover:border-[oklch(78%_0.14_75)] hover:bg-[oklch(78%_0.14_75)]/10 hover:shadow-[0_0_20px_rgba(255,191,105,0.15)]">
+              <h3 className="font-semibold text-foreground">Synapse Guard</h3>
+              <p className="mt-2 text-sm text-foreground/75">
                 Verification, claims tracking, and audit trails to reduce greenwash risk.
               </p>
             </div>
-            <div className="rounded-xl border border-border/60 bg-card/50 p-5 backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:shadow-[0_0_20px_rgba(138,123,255,0.15)]">
-              <h3 className="font-semibold text-black">Studio Works</h3>
-              <p className="mt-2 text-sm text-black">
+            <div className="rounded-xl border border-border/60 bg-card/80 p-5 backdrop-blur-sm transition-all duration-300 hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_20px_rgba(138,123,255,0.15)]">
+              <h3 className="font-semibold text-foreground">Studio Works</h3>
+              <p className="mt-2 text-sm text-foreground/75">
                 Senior storytellers and designers who craft the final film, page, and post.
               </p>
             </div>
