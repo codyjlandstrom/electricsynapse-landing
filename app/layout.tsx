@@ -1,16 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist } from "next/font/google"
-import { Fraunces } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
+import { Roboto_Slab, Source_Sans_3 } from "next/font/google"
 import "./globals.css"
 
-const geist = Geist({ subsets: ["latin"] })
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-})
+const sourceSans = Source_Sans_3({ subsets: ["latin"], variable: "--font-sans" })
+const robotoSlab = Roboto_Slab({ subsets: ["latin"], variable: "--font-heading" })
 
 export const metadata: Metadata = {
   title: "Electric Synapse — The signal between data and meaning",
@@ -50,9 +44,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geist.className} ${fraunces.variable} font-sans antialiased`}>
+      <body className={`${sourceSans.variable} ${robotoSlab.variable} font-sans antialiased`}>
         {children}
-        <Analytics />
       </body>
     </html>
   )
