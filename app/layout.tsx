@@ -2,6 +2,9 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Roboto_Slab, Source_Sans_3 } from "next/font/google"
 import "./globals.css"
+import { Navbar } from "@/components/layout/navbar"
+import { Footer } from "@/components/layout/footer"
+import { InteractiveBackground } from "@/components/interactive-background"
 
 const sourceSans = Source_Sans_3({ subsets: ["latin"], variable: "--font-sans" })
 const robotoSlab = Roboto_Slab({ subsets: ["latin"], variable: "--font-heading" })
@@ -45,7 +48,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sourceSans.variable} ${robotoSlab.variable} font-sans antialiased`}>
-        {children}
+        <InteractiveBackground />
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )
