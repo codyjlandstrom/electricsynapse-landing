@@ -5,6 +5,7 @@ import "./globals.css"
 import { Navbar } from "@/components/layout/navbar"
 import { Footer } from "@/components/layout/footer"
 import { InteractiveBackground } from "@/components/interactive-background"
+import { PostHogProvider } from "@/components/posthog-provider"
 
 const sourceSans = Source_Sans_3({ subsets: ["latin"], variable: "--font-sans" })
 const robotoSlab = Roboto_Slab({ subsets: ["latin"], variable: "--font-heading" })
@@ -48,10 +49,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sourceSans.variable} ${robotoSlab.variable} font-sans antialiased`}>
-        <InteractiveBackground />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <PostHogProvider>
+          <InteractiveBackground />
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </PostHogProvider>
       </body>
     </html>
   )

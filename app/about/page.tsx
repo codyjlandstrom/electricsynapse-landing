@@ -149,7 +149,7 @@ export default function About() {
                 <h3 className="font-heading text-2xl font-bold mb-8 text-brand-navy">
                   Leadership
                 </h3>
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 gap-8">
                   {/* Michael Keller */}
                   <div className="flex flex-col gap-4">
                     <div className="w-full aspect-square rounded-2xl overflow-hidden bg-slate-100 mb-2">
@@ -246,52 +246,6 @@ export default function About() {
                     </div>
                   </div>
 
-                  {/* Cody Landstrom */}
-                  <div className="flex flex-col gap-4">
-                    <div className="w-full aspect-square rounded-2xl overflow-hidden bg-slate-100 mb-2">
-                      <img
-                        src="/images/team/cody.jpg"
-                        alt="Cody Landstrom"
-                        className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-xl text-brand-navy mb-1">
-                        Cody Landstrom
-                      </h4>
-                      <p className="text-slate-500 font-medium mb-2">
-                        Co-Founder | Product &amp; Engineering
-                      </p>
-                      <Accordion type="single" collapsible className="w-full">
-                        <AccordionItem value="bio" className="border-b-0">
-                          <AccordionTrigger className="py-2 text-sm font-medium text-brand-indigo hover:no-underline hover:text-brand-navy data-[state=open]:text-brand-navy p-0 justify-start gap-2">
-                            Read Bio
-                          </AccordionTrigger>
-                          <AccordionContent className="text-slate-600 leading-relaxed text-sm pt-4 pb-2">
-                            <p className="mb-3">
-                              Cody leads product architecture and engineering
-                              for StoryFlow ESG. He has been at the forefront of
-                              enterprise software development for years,
-                              including work connected to IBM Watson for Oncology
-                              and large-scale AI-powered coding systems.
-                            </p>
-                            <p className="mb-3">
-                              His background spans complex data systems, applied
-                              artificial intelligence, and enterprise-grade
-                              infrastructure. He approaches ESG communication as
-                              a systems problem requiring verification and
-                              traceability.
-                            </p>
-                            <p>
-                              Cody architects the platform&apos;s knowledge and
-                              verification layers, ensuring messaging rests on
-                              defensible evidence.
-                            </p>
-                          </AccordionContent>
-                        </AccordionItem>
-                      </Accordion>
-                    </div>
-                  </div>
                 </div>
               </div>
 
