@@ -9,40 +9,36 @@ A coworker built a V2 of the Electric Synapse landing site in Replit using Vite 
 - **Framework:** Keep Next.js 15 App Router with static export (`output: 'export'`)
 - **Backend:** None — static site only, strip Express/PostgreSQL/Drizzle
 - **Design system:** Adopt V2's fonts (Roboto Slab / Source Sans 3) and colors (orange/cyan/navy)
-- **Scope:** Core pages first (home, about, agency, contact), remaining pages later
+- **Scope:** All 5 pages from the current v2 build
 - **Approach:** Incremental port — add V2 content into existing project structure
 
-## Phase 1: Core Pages
-
-### Pages to Port
+## Pages to Port
 
 | Route | Source | Description |
 |-------|--------|-------------|
-| `/` | `v2/.../pages/home.tsx` | Hero, ESG triptych, StoryFlow showcase, case studies, studio overview |
-| `/about` | `v2/.../pages/about.tsx` | Mission, 4 core principles, FAQ accordion |
-| `/agency` | `v2/.../pages/agency.tsx` | 5 service offerings, studio capabilities |
-| `/contact` | `v2/.../pages/contact.tsx` | Contact form (static), location info |
-| `not-found` | `v2/.../pages/not-found.tsx` | 404 page |
+| `/` | `v2/.../pages/home.tsx` | Hero, ESG triptych, StoryFlow showcase, value props, studio overview, CTA |
+| `/storyflow-esg` | `v2/.../pages/storyflow-esg.tsx` | Platform page — dashboard mockup, strategic gap, workflow architecture, stakeholder value |
+| `/agency` | `v2/.../pages/agency.tsx` | 5 service offerings, engagement models CTA |
+| `/work` | `v2/.../pages/work.tsx` | 5 case studies with before/after, flagship case, approach section |
+| `/about` | `v2/.../pages/about.tsx` | Mission, 4 core principles, 3 leadership bios with accordion |
+| `not-found` | Custom | 404 page styled to match v2 |
 
-### Phase 2 (Future)
-
-- `/storyflow-esg` — Product page
-- `/work` + `/portfolio` — Case studies
-- `/insights` — Blog/thought leadership
-- `/signal-forge` — Interactive AI claim validator
+No contact page — CTAs link to `mailto:hello@electricsynapse.ai`.
 
 ## Architecture
 
 ```
 app/
-├── layout.tsx          # Root layout — Roboto Slab / Source Sans 3 fonts, navbar, footer
+├── layout.tsx          # Root layout — fonts, navbar, footer, InteractiveBackground
 ├── page.tsx            # Home (from v2 home.tsx)
+├── storyflow-esg/
+│   └── page.tsx        # Platform (from v2 storyflow-esg.tsx)
+├── agency/
+│   └── page.tsx        # Capabilities (from v2 agency.tsx)
+├── work/
+│   └── page.tsx        # Work (from v2 work.tsx)
 ├── about/
 │   └── page.tsx        # About (from v2 about.tsx)
-├── agency/
-│   └── page.tsx        # Agency (from v2 agency.tsx)
-├── contact/
-│   └── page.tsx        # Contact (from v2 contact.tsx)
 ├── not-found.tsx       # 404 page
 └── globals.css         # V2 color palette + font variables
 
@@ -116,3 +112,5 @@ V2's Wouter `<Link>` becomes Next.js `<Link>` from `next/link`. All routes are s
 - `app/page.tsx` — replaced with V2 home
 - V1 color palette in `globals.css` — replaced with V2 colors
 - V1 fonts (Geist / Fraunces) — replaced with V2 fonts (Roboto Slab / Source Sans 3)
+- `components/interactive-background.tsx` — canvas particle system replaced with V2 image-based background
+- CTAs that linked to `/contact` — replaced with `mailto:hello@electricsynapse.ai`
