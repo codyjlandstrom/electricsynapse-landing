@@ -1,0 +1,125 @@
+# ES SignalForge - AI Crawler Configuration
+# Generated for: www.electricsynapse.ai
+# Generated on: 2025-12-03
+#
+# This file controls which AI systems can access your content.
+# Training crawlers: BLOCKED
+
+# ═══════════════════════════════════════════════════════════════
+# AI SEARCH & RETRIEVAL BOTS (Always Allowed)
+# These power AI-assisted search - blocking them hides you from AI search results
+# ═══════════════════════════════════════════════════════════════
+
+# OpenAI real-time browsing for ChatGPT users
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI SearchGPT retrieval (citation-based search)
+User-agent: OAI-SearchBot
+Allow: /
+
+# Perplexity AI search engine
+User-agent: PerplexityBot
+Allow: /
+
+# Google search indexing
+User-agent: Googlebot
+Allow: /
+
+# Microsoft Bing search (powers Copilot)
+User-agent: Bingbot
+Allow: /
+
+# DuckDuckGo search
+User-agent: DuckDuckBot
+Allow: /
+
+# Apple Siri and Spotlight search
+User-agent: Applebot
+Allow: /
+
+# You.com search engine
+User-agent: YouBot
+Allow: /
+
+# ═══════════════════════════════════════════════════════════════
+# AI TRAINING CRAWLERS
+# These collect data to train AI models - BLOCKED to protect your IP
+# ═══════════════════════════════════════════════════════════════
+
+# OpenAI model training
+User-agent: GPTBot
+Disallow: /
+
+# Google Gemini/Bard training
+User-agent: Google-Extended
+Disallow: /
+
+# Anthropic Claude training
+User-agent: ClaudeBot
+Disallow: /
+
+# Anthropic data collection
+User-agent: anthropic-ai
+Disallow: /
+
+# Anthropic web crawling
+User-agent: Claude-Web
+Disallow: /
+
+# Common Crawl (used by many AI models)
+User-agent: CCBot
+Disallow: /
+
+# Meta/Facebook AI training
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# Amazon Alexa/AI training
+User-agent: Amazonbot
+Disallow: /
+
+# Cohere AI model training
+User-agent: cohere-ai
+Disallow: /
+
+# ByteDance/TikTok AI training
+User-agent: Bytespider
+Disallow: /
+
+# Apple AI/ML training
+User-agent: Applebot-Extended
+Disallow: /
+
+# Meta AI training
+User-agent: FacebookBot
+Disallow: /
+
+# Webz.io data collection
+User-agent: Omgilibot
+Disallow: /
+
+# Diffbot knowledge graph training
+User-agent: Diffbot
+Disallow: /
+
+# ═══════════════════════════════════════════════════════════════
+# USAGE TERMS NOTICE
+# ═══════════════════════════════════════════════════════════════
+#
+# This content is provided for AI-assisted search and retrieval only.
+# Crawling for AI model training, dataset compilation, or derivative
+# works is expressly prohibited without written permission.
+#
+# Contact: See https://www.electricsynapse.ai for licensing inquiries.
+
+# ═══════════════════════════════════════════════════════════════
+# STANDARD WEB CRAWLERS & SITEMAP
+# ═══════════════════════════════════════════════════════════════
+
+User-agent: *
+Allow: /
+
+# AI-optimized content discovery
+Sitemap: https://www.electricsynapse.ai/ai-sitemap.xml
+Sitemap: https://www.electricsynapse.ai/sitemap.xml
